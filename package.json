@@ -1,5 +1,5 @@
 {
-  "name": "taskify",
+  "name": "cryptoboard",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -22,6 +22,7 @@
     "nodemailer": "^6.9.2",
     "postcss": "8.4.23",
     "react": "18.2.0",
+    "react-beautiful-dnd": "^13.1.1",
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.2",
     "validator": "^13.9.0"

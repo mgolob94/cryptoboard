@@ -72,7 +72,7 @@ function AuthForm() {
               Sign in to your account
             </h2>
           </div>
-          <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+          <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm bg-slate-100 p-5 rounded-xl">
             <form className="space-y-6" onSubmit={submitHandler}>
               <div>
                 <label
@@ -103,7 +103,7 @@ function AuthForm() {
                   <div className="text-sm">
                     <a
                       href="#"
-                      className="font-semibold text-indigo-600 hover:text-indigo-500"
+                      className="font-semibold text-cyan-950 hover:text-indigo-500"
                     >
                       Forgot password?
                     </a>
@@ -123,21 +123,34 @@ function AuthForm() {
               <div className="flex align-items-center">
                 <button
                   type="submit"
-                  className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="flex w-full justify-center rounded-md bg-cyan-950 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   {isLogin ? "Sign In" : "Create Account"}
                 </button>
               </div>
             </form>
 
-            <button onClick={() => signIn("google")}>
-              Sign in with Google
-            </button>
+            <div className="mt-3">
+              <p className="mt-4 mb-4 text-center">or</p>
+              <button
+                className="button flex bg-white p-3 m-auto"
+                onClick={() => signIn("google")}
+              >
+                <img
+                  height={24}
+                  width={24}
+                  className="mr-3"
+                  src="https://authjs.dev/img/providers/google.svg"
+                />
+
+                <span>Sign in with Google</span>
+              </button>
+            </div>
 
             <p className="mt-10 text-center text-sm text-gray-500">
               <a
                 onClick={switchAuthModeHandler}
-                className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+                className="font-semibold leading-6 text-cyan-950 hover:text-indigo-500"
               >
                 {isLogin ? "No Account? Create One" : "Already a user? Login"}
               </a>

@@ -1,4 +1,5 @@
 import { SessionProvider } from "next-auth/react";
+import "../styles/style.css";
 
 function MyApp({ Component, pageProps }) {
   return (
